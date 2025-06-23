@@ -1,0 +1,28 @@
+{
+  "name": "whaticket",
+  "version": "1.0.0",
+  "description": "WhatsApp Business API for managing conversations",
+  "main": "index.js",
+  "scripts": {
+    "start": "concurrently \"npm run start:backend\" \"npm run start:frontend\"",
+    "start:backend": "cd backend && npm run dev:server",
+    "start:frontend": "cd frontend && npm start",
+    "build": "concurrently \"npm run build:backend\" \"npm run build:frontend\"",
+    "build:backend": "cd backend && npm run build",
+    "build:frontend": "cd frontend && npm run build",
+    "install:all": "npm install && cd backend && npm install && cd ../frontend && npm install",
+    "dev": "npm run start"
+  },
+  "keywords": [
+    "whatsapp",
+    "business",
+    "api",
+    "chat",
+    "customer-service"
+  ],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+} 
