@@ -43,8 +43,8 @@ describe("Auth", () => {
       });
     } catch (err) {
       expect(err).toBeInstanceOf(AppError);
-      expect(err.statusCode).toBe(401);
-      expect(err.message).toBe("ERR_INVALID_CREDENTIALS");
+      expect((err as AppError).statusCode).toBe(401);
+      expect((err as AppError).message).toBe("ERR_INVALID_CREDENTIALS");
     }
   });
 
@@ -62,8 +62,8 @@ describe("Auth", () => {
       });
     } catch (err) {
       expect(err).toBeInstanceOf(AppError);
-      expect(err.statusCode).toBe(401);
-      expect(err.message).toBe("ERR_INVALID_CREDENTIALS");
+      expect((err as AppError).statusCode).toBe(401);
+      expect((err as AppError).message).toBe("ERR_INVALID_CREDENTIALS");
     }
   });
 });

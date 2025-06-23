@@ -41,7 +41,7 @@ describe("User", () => {
       });
     } catch (err) {
       expect(err).toBeInstanceOf(AppError);
-      expect(err.statusCode).toBe(400);
+      expect((err as AppError).statusCode).toBe(400);
     }
   });
 });

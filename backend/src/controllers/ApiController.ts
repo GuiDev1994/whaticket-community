@@ -91,8 +91,8 @@ export const index = async (req: Request, res: Response): Promise<Response> => {
 
   try {
     await schema.validate(newContact);
-  } catch (err: any) {
-    throw new AppError(err.message);
+  } catch (err) {
+    throw new AppError((err as Error).message);
   }
 
   const contactAndTicket = await createContact(whatsappId, newContact.number);
